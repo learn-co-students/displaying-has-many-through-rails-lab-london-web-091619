@@ -1,0 +1,9 @@
+
+<h1><%= @doctor.name %></h1>
+<h2><%=@doctor.department%></h2>
+<%@doctor.appointments.each do |appointment|%>
+<h3><%=appointment.parse_datetime%></h3>
+<h3><%=link_to appointment.patient_name, patient_path%></h3>
+<%end%>
+ 
+<p>Find me in app/views/doctor/show.html.erb</p>
